@@ -67,7 +67,7 @@
 
 #### * _Index page_
 
-#### router.HandleFunc("/index", Index).Methods("GET")
+#### router.HandleFunc("/", Index).Methods("GET")
 
 ### Router Port is **3000**
 
