@@ -179,7 +179,7 @@ func main() {
 	router.HandleFunc("/customer", addCustomer).Methods("POST")
 	router.HandleFunc("/customer/{id}", updateCustomer).Methods("PUT")
 	router.HandleFunc("/customer/{id}", deleteCustomer).Methods("DELETE")
-	router.HandleFunc("/index", Index).Methods("GET")
+	router.HandleFunc("/", Index).Methods("GET")
 
 	fmt.Println("Server is starting on port 3000...")
 	// Pass the customer router into ListenAndServe
