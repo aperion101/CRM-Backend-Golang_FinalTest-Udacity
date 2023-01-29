@@ -70,6 +70,8 @@ func getCustomer(w http.ResponseWriter, r *http.Request) {
 			json.NewEncoder(w).Encode(dataCustomers[k])
 		} else {
 			w.WriteHeader(http.StatusNotFound)
+			fmt.Fprintf(w, "Customer Not Found\n")
+			break
 		}
 	}
 }
@@ -139,6 +141,8 @@ func updateCustomer(w http.ResponseWriter, r *http.Request) {
 			json.NewEncoder(w).Encode(dataCustomers)
 		} else {
 			w.WriteHeader(http.StatusNotFound)
+			fmt.Fprintf(w, "Customer Not Found\n")
+			break
 		}
 	}
 
@@ -155,6 +159,8 @@ func deleteCustomer(w http.ResponseWriter, r *http.Request) {
 			json.NewEncoder(w).Encode(dataCustomers)
 		} else {
 			w.WriteHeader(http.StatusNotFound)
+			fmt.Fprintf(w, "Customer Not Found\n")
+			break
 		}
 	}
 }
